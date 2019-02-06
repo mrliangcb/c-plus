@@ -1,0 +1,33 @@
+https://blog.csdn.net/aaaluozi/article/details/78023499
+visual studio 2017使用C++
+
+一个工程不能有两个main
+
+printf是一个函数
+cout是一个对象
+console控制台，命令行
+
+什么是命名空间?
+大工程容易全部变量重复，局部和全局重复
+
+终端IO   键盘，命令行  c与c+的区别
+
+文件io的区别
+
+argc 整形    argv  字符型
+参数数量
+
+函数重载
+同样名字，不同参数
+
+第七课输入输出还没学
+
+
+首先是数组然后是指针
+数组：存多个同类型的数
+
+
+
+
+
+

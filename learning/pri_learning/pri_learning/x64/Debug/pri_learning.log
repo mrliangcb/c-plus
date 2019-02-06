@@ -1,0 +1,4 @@
+﻿  pri_learning.cpp
+c:\lcb\learning_python_git\c-plus\learning\pri_learning\pri_learning\pri_learning.cpp(9): error C2039: “cout”: 不是“std”的成员
+  c:\lcb\learning_python_git\c-plus\learning\pri_learning\pri_learning\predefined c++ types (compiler internal)(257): note: 参见“std”的声明
+c:\lcb\learning_python_git\c-plus\learning\pri_learning\pri_learning\pri_learning.cpp(9): error C2065: “cout”: 未声明的标识符

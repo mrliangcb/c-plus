@@ -1,0 +1,3 @@
+﻿  day3.cpp
+c:\lcb\learning_python_git\c-plus\learning\day3\day3.cpp(13): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
+  day3.vcxproj -> C:\lcb\learning_python_git\c-plus\learning\day3\Debug\day3.exe
