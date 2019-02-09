@@ -1,0 +1,5 @@
+﻿  that.cpp
+  this.cpp
+  正在生成代码...
+this.obj : error LNK2001: 无法解析的外部符号 "unsigned short thatNum" (?thatNum@@3GA)
+C:\lcb\learning_python_git\c-plus\learning\day10\Debug\day10.exe : fatal error LNK1120: 1 个无法解析的外部命令
