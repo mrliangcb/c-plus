@@ -1,7 +1,7 @@
 # c-plus
 
 ## 1.[day1](./learning/day1)
-内容：iostream的 cout，自定义函数，数组声明定义
+内容：iostream的 cout，自定义函数与声明，数组声明定义
 
 ## 2.[day2](./learning/day2)
 内容：对文件进行读写，以及几种模式,app追加,in读,out写
@@ -23,6 +23,13 @@
 内容:类class,类的public变量与方法，可以类外定义也可以类内定义，但要在类内声明;this指针;构造方法就必须在类外定义，而且不用void
 
 
-## 8.[day7](./learning/day8)
+## 8.[day8](./learning/day8)
 内容:
-
+<1>public与private(public可以访问private,但类外只能访问public，不能访问private);
+<2>static变量，是属于类的，没有static的都是对象独有的
+<3>子类继承了父类class Pig :public Animal，可以son::static公共方法  也可以father::static公共方法, 两者等价
+ 
+## 9.[day9](./learning/day9)
+内容:
+<1>
+<2>

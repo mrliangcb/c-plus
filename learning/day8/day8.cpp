@@ -71,7 +71,7 @@ int main()
 	//pig.eat();//表明pig也有父类的方法
 	//std::cout<<pig.Name;
 	//std::cout<<Animal::count<<std::endl;//当count放在public的时候，就可以类外访问。放在private就是能类内，这里访问不了
-	std::cout << std::endl<< "现在有多少只:" <<Animal::getCount()<<std::endl;//不能用animal::count，因为这里不是类内，不能用private成员，
+	std::cout << std::endl<< "现在有多少只:" <<Pig::getCount()<<std::endl;//不能用animal::count，因为这里不是类内，不能用private成员，
 	//类内的public成员函数可以对private变量做任何操作
 	std::cout << "程序即将完成，完成了就立马析构所有成员" << std::endl;
 
