@@ -78,5 +78,22 @@ make install
 compile the DGtal solution (you may also need to set the cmake variable ```BUILD_SHARED_LIBS``` to false).
 不用管
 
-12.
+12.技巧
+https://blog.csdn.net/aniuge008/article/details/73195297
+汉化codeblocks
+
+13.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
