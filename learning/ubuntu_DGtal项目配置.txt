@@ -81,9 +81,21 @@ compile the DGtal solution (you may also need to set the cmake variable ```BUILD
 12.技巧
 https://blog.csdn.net/aniuge008/article/details/73195297
 汉化codeblocks
+https://www.cnblogs.com/acbingo/p/4531054.html
 
-13.
+13.有教程
+https://dgtal.org/doc/stable/这里是介绍使用  用户指南
 
+14.codeblocks配置第三方库
+https://www.jianshu.com/p/111571e4d6f5
+
+
+15.https://www.youtube.com/channel/UCoNrJm4myR8REBcIwIxIzag/search?query=codeblock
+codeblocks教程
+
+16.链接动态库和静态库
+https://www.youtube.com/watch?v=80R6MbSpoqc
+https://www.youtube.com/watch?v=qFhDDb5GhOk
 
 
 
