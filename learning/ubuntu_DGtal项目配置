@@ -1,27 +1,14 @@
 #
-1.安装c++编译器
+1.install c++ compiler编译器
 https://blog.csdn.net/u013634961/article/details/39234183
 
-2.安装codeblocks
+2.install codeblocks
 https://www.bilibili.com/video/av32403187?from=search&seid=206068546324461069
 也可以直接在商店找
 新建一个file，cpp，就可以直接运行
 
-3.克隆DGtal
-git clone git://github.com/DGtal-team/DGtal.git
 
-4.建立library
-https://dgtal.org/download/
-https://dgtal.org/doc/stable/moduleBuildDGtal.html
-
-
-5.安装deb包
-sudo dpkg -i XXXX.deb
-
-i386仍未被配置(不能解决)
-sudo apt-get -f install
-
-安装boost
+3.安装boost
 https://blog.csdn.net/xuehuafeiwu123/article/details/78611203
 
 https://www.boost.org/users/history/version_1_69_0.html
@@ -49,7 +36,7 @@ ls b*
 
 Boost库是一个可移植、提供源代码的C++库，作为标准库的后备，是C++标准化进程的开发引擎之一
 
-6.安装zlib
+4.安装zlib
 https://blog.csdn.net/qq_21383435/article/details/79539034
 然后解压
 ./configure
@@ -62,32 +49,34 @@ usr/local/lib/libz.a
 usr/local/inclue/有zconf.h  zlib.h
 
 
-7.安装doxygen
+5.安装doxygen
 https://blog.csdn.net/Q1302182594/article/details/51517880
 
-8.安装latex
+6.安装latex
 https://jingyan.baidu.com/article/7c6fb4280b024180642c90e4.html
 
 
-9.cmake -version
+7.cmake -version
 查版本
 
 
-10.cmake error at findboost.cmake 1947 message报错
+8.cmake error at findboost.cmake 1947 message报错
 sudo apt-get install libboost-all-dev
 
-11.https://dgtal.org/download/  安装DGtal库
+9.https://dgtal.org/download/  安装DGtal库 instruction
 
-12.
+https://dgtal.org/doc/stable/moduleBuildDGtal.html
+
+10.
 git clone https://github.com/DGtal-team/DGtal.git
 cd DGtal; mkdir build; cd build
-cmake ..
+cmake ..    (结果的后面没有出现error occur就成功了，如果occure，则看前面的报错，缺什么就装什么)
 make install
 
 
-13.remead文件告诉我
+11.remead文件告诉我
 compile the DGtal solution (you may also need to set the cmake variable ```BUILD_SHARED_LIBS``` to false).
 不用管
 
-14.
+12.
 
