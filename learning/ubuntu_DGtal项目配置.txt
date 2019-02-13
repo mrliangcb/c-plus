@@ -110,6 +110,7 @@ cmake介绍
 DG/src/DGtal/topology/helpers
 尽管usr/local/include/DGtal/topology有这个文件，但要从github下来的DGtal拿过去
 
+名字 -v或者-version 可以查看版本
 
 
 

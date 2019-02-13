@@ -123,10 +123,13 @@ https://segmentfault.com/q/1010000009029177
 
 main.cpp
 	#include "a.h"
-	#include ""
+		声明了int aa函数
+	#include "b.h"
+		声明了int bb函数
 
+(1)如果这些文件定义的变量重名了呢，怎么解决
 
-
+(2)" .h"先找当下目录的，如果没有就找系统环境的
 
 
 
