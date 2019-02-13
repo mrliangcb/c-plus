@@ -47,7 +47,7 @@
 如果#ifndef aa.h为假的话，就直接走到末尾endif   不执行程序正文   
 所以这句话的意思：如果还没定义这个aa.h头文件的话，那就这篇文章定义  
   
-<7>extern用法  
+<7>extern用法  顺序：实际工程->头文件.h->include过这个头文件的cpp
 ```
 a.h相当于说明书
 情景:a,b,c,d.cpp都include "a.h"，因此a,b,c,d都是a.h的小弟
