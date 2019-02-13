@@ -53,7 +53,7 @@ a.h相当于说明书
 情景:a,b,c,d.cpp都include "a.h"，因此a,b,c,d都是a.h的小弟
 
 const int a1=3; 声明定义了全局常量
-extern char b1; 声明了外部的变量，当某人.cpp想用a.h系统下的这个b1值，不用直接看哪个小弟有
+extern string b1; 声明了外部的变量，当某人.cpp想用a.h系统下的这个b1值，不用直接看哪个小弟有
 //直接include a.h，直接向大佬要，然后大佬就从小弟里面找b1这个值给某人.cpp
 //注意，自己include了a.h，自己也是a.h的小弟
 //所以说我想用某个模块的b1变量时，只要include相关头文件(包含了有b1的模块的)就行
@@ -61,12 +61,15 @@ extern abc b2; 外部的类声明了一个b2对象 全局的
 ```
   
 ```
+工具模块b
 b.cpp
-#include "a.h" //因为我想拿.h包含的一系列变量，函数来用，如第三者的b1,a.h自己的a1
-a1全局常量可以直接拿来用
-b1 
-abc 
-
+#include "a.h" //成为了a.h的小弟
+string b1='hello!' //原来是b模块定义了b1
 ```
-
-
+  
+```
+实际工程
+#include "a.h" //如果我要用模块b的b1,就include b的大佬就行a.h
+cout<<b1<<endl;
+```
+  
