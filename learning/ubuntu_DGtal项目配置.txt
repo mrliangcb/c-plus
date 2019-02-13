@@ -112,7 +112,14 @@ DG/src/DGtal/topology/helpers
 
 名字 -v或者-version 可以查看版本
 
+进入到老师的DGtal contrib
+geometry2d 
+distanceTransform是老师的代码
 
+./RationalBeattySequenceTest
+
+./LUTBasedNSDistanceTransform
+运行这个成功说明已经安装好了
 
 
 
