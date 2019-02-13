@@ -112,8 +112,8 @@ DG/src/DGtal/topology/helpers
 
 名字 -v或者-version 可以查看版本
 
-进入到老师的DGtal contrib
-geometry2d 
+进入到老师的DGtal contrib (建立build，然后cmake ..)
+build/geometry2d/distanceTransform/       
 distanceTransform是老师的代码
 
 ./RationalBeattySequenceTest

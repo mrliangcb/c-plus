@@ -1,4 +1,4 @@
-# c-plus
+# c++ 学习笔记
 
 ## 1.[day1](./learning/day1)
 内容：iostream的 cout，自定义函数与声明，数组声明定义
@@ -74,8 +74,19 @@ cout<<b1<<endl;
 ```
   
 <8>静态全局变量
+暂时看到静态变量在.h头文件中声明、定义  
+主程序也有定义static in a=3，意思是本文用到的a全都是a=3这个量，不看别人定义a是什么  
+工具模块cpp中出现的话，就是此模块内用到的a都是指本模块定义的a=3，不管别的文章怎么定义  
+注意:include .h， 头文件也会收纳进来cpp作为本文的扩充，所以头文件定义的static a=3也算是本文定义的  
 
 
+## 11. ./运行linux文件
+可以运行.cpp 通过cmake出来的可执行文件文件(shall)
 
+如何将源文件.cpp  cmake 成可执行文件?
+https://blog.csdn.net/zhuquan945/article/details/52788278
+http://zhangyuyu.github.io/2018/06/24/%E8%AE%A4%E8%AF%86Cmake/
+cmake是操作makelist
+https://my.oschina.net/hevakelcj/blog/287782
 
 
