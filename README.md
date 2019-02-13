@@ -40,4 +40,33 @@
 <2>static的变量，只能在当前页面使用，由于把头文件include进来（相当于合在主程序页面），所以主程序不用声明也可以用  
 <3>主程序this的extern的声明 是为了使用另一个CPP源文件中非静态thatNum变量，  
 <4>that中的函数建立前需要声明，声明放在了头文件.h，这样避免了如果在that声明，则this又要重复声明，引入.h就可以不用重复声明了   
-<5>
+<5>http://www.cnblogs.com/rollenholt/archive/2012/03/20/2409046.html  
+说到头文件  
+
+<6>#ifndef的作用 https://blog.csdn.net/yz_lby/article/details/46458713  
+如果#ifndef aa.h为假的话，就直接走到末尾endif   不执行程序正文   
+所以这句话的意思：如果还没定义这个aa.h头文件的话，那就这篇文章定义  
+  
+<7>extern用法  
+```
+a.h相当于说明书
+情景:a,b,c,d.cpp都include "a.h"，因此a,b,c,d都是a.h的小弟
+
+const int a1=3; 声明定义了全局常量
+extern char b1; 声明了外部的变量，当某人.cpp想用a.h系统下的这个b1值，不用直接看哪个小弟有
+//直接include a.h，直接向大佬要，然后大佬就从小弟里面找b1这个值给某人.cpp
+//注意，自己include了a.h，自己也是a.h的小弟
+//所以说我想用某个模块的b1变量时，只要include相关头文件(包含了有b1的模块的)就行
+extern abc b2; 外部的类声明了一个b2对象 全局的
+```
+  
+```
+b.cpp
+#include "a.h" //因为我想拿.h包含的一系列变量，函数来用，如第三者的b1,a.h自己的a1
+a1全局常量可以直接拿来用
+b1 
+abc 
+
+```
+
+
