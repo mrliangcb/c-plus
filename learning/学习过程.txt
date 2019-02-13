@@ -1,0 +1,135 @@
+1.学习资源
+https://www.jianshu.com/p/0441c3093e8c
+https://qdan.me/list/VVzK89pI2KkL_m4k
+
+
+github教程
+https://github.com/wuye9036/CppTemplateTutorial  c++emplet 进阶
+
+https://github.com/ianisme/IANRuntimeStudy   
+
+https://github.com/Y-Dian/LearnXinYminutes/blob/master/learnc-cn.c
+
+https://github.com/Lellansin/C-basic-tutorial   基础语法
+
+https://github.com/gyshgx868/cpp-tutorial   基础教程
+
+
+
+c++如何引用第三方库？
+是否有类似python  pip install的安装库方法
+
+对每个库
+(1)网上下载库
+(1)告诉编译器在哪里查找库的头文件。
+(2)告诉链接器在哪里查找库的库文件。
+（3）有时候还要获得某些编译器的标记
+
+对每个项目
+(1)高速连接器那些静态，或者导入库文件
+（2）#include 头文件
+(3)确保程序能够找到动态库
+
+
+
+不同操作系统和IDE之间差异很大
+如果将代码放入自己的项目中，是很别扭的
+一般是将库和自己的项目分开
+include <>表示,这不是我项目的一部分，请从包含路径获取他
+
+
+your_sources/
+    main.cpp
+    boost/
+        numeric/
+            odeint/
+            odeint.hpp
+#include "boost/numeric/odeint.hpp"
+
+手动放置库不好
+
+引用外部库步骤
+http://www.learncpp.com/cpp-tutorial/a3-using-libraries-with-codeblocks/
+
+（1）获取和安装库（静态和动态库）
+(2)告诉编译器找到头文件和库文件
+settings，compiler编译器
+directories,compiler,添加库library的.h文件的路径，例如c:\libs\PDCurses add(linux是在/usr/include)
+
+然后从compiler选项改到linker 同样增加c:\libs\PDCurses
+ok
+
+(3)告诉连接器 正在用哪里library
+
+左边sources上面的codeblocks标志，右键，build options构建选项
+linker  添加c:\libs\PDCurses\pdcurses.lib
+
+确定
+
+(4) #include 头文件确保可以找到DLL
+
+讲了静态库和动态库
+http://www.learncpp.com/cpp-tutorial/a1-static-and-dynamic-libraries/
+一个library就是一个代码包，是为了被使用
+(1)头文件  说明程序的功能
+(2)预编译的二进制文件(我理解为，把固定的函数部分预先编译了，那以后使用的时候，只编译数字就好了，不用再编译整个模型，节省时间)
+为什么库要被编译呢
+库很少更改，不需要经常编译，如果老是重复编译则浪费时间(特别是对于不想提供源代码的人来说，只给这个编译的二进制文件更好)
+静态库一般是.lib ， linux上一般是.a
+静态库也无法轻松升级 - 更新库，需要更换整个可执行文件。
+而且一个程序拥有他的一个副本
+
+动态库也是共享库
+编译使用动态库的程序时，库不会成为可执行文件的一部分 - 它仍然是一个单独的单元
+.dll和linux中的.so
+多个程序共享一个副本
+
+找库的头文件
+一般，windows所有库都安装在C：\ Libs\sdl\includes
+linux通常在/ usr / include
+
+找库
+windows: C：\ Libs\子目录
+linux:/ usr / lib
+
+
+https://www.cnblogs.com/qrlozte/p/4100892.html   c++第三方库的使用
+
+http://forums.codeblocks.org/index.php?topic=9366.0
+codeblock添加库文件
+
+https://blog.csdn.net/u012611644/article/details/81105539  vs添加第三方库   恶心方法
+
+c++编译过程
+https://www.youtube.com/watch?v=NFMDiAGPP1g
+源文件.cpp
+编译就出现了一个exe
+
+预处理  编译  目标文件.o
+C++库连接
+形成二进制exe
+
+g++ -o HelloWorld.ii(预处理) -E  HelloWorld.cpp()
+预处理就是把头文件iostream的全部文件包含进来
+包括里面有std的namespace
+
+引入开源库
+
+https://segmentfault.com/q/1010000009029177
+
+
+主程序main.cpp通过头文件（声明了一些函数，类），然后去找这些函数.so  的库文件（头文件.h跟main程序正文一样参与编译，
+但.so库已经编译好了，只需要拿来用）
+
+main.cpp
+	#include "a.h"
+	#include ""
+
+
+
+
+
+
+
+
+

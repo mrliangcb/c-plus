@@ -97,9 +97,18 @@ codeblocks教程
 https://www.youtube.com/watch?v=80R6MbSpoqc
 https://www.youtube.com/watch?v=qFhDDb5GhOk
 
+17.https://blog.csdn.net/gua_mass/article/details/61620481
+cmake介绍
 
+18.我的usr下的DGtal在哪
+/usr/local/include/DGtal
+为什么CMAKE之后，我的本地usr的库里会有DGtal的东西呢？
+为什么又不完整呢?
 
+编译错误的时候我就找到DGtal/src/Board的shape.h文件传过去就编译通了
 
+DG/src/DGtal/topology/helpers
+尽管usr/local/include/DGtal/topology有这个文件，但要从github下来的DGtal拿过去
 
 
 
