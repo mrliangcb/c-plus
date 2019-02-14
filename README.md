@@ -60,15 +60,15 @@ const成员必须用初始化表的形式进行初始化。
 	
 
 
-## 8.[day8](./learning/day8)
-内容:
-<1>public与private(public可以访问private,但类外只能访问public，不能访问private);
-<2>static变量，是属于类的，没有static的都是对象独有的
-<3>子类继承了父类class Pig :public Animal，可以son::静态公共方法  也可以father::静态公共方法, 两者等价
-<4>子类的构造方法继承父类构造方法
-<5>子类普通方法继承父类普通方法
-<6>类::属性   对象.属性
-<7>类::静态成员   非静态成员不能通过类访问
+## 8.[day8](./learning/day8)  
+内容:  
+<1>public与private(public可以访问private,但类外只能访问public，不能访问private);  
+<2>static变量，是属于类的，没有static的都是对象独有的  
+<3>子类继承了父类class Pig :public Animal，可以son::静态公共方法  也可以father::静态公共方法, 两者等价  
+<4>子类的构造方法继承父类构造方法  
+<5>子类普通方法继承父类普通方法  
+<6>类::属性   对象.属性  
+<7>类::静态成员   非静态成员不能通过类访问  
 
  
 ## 9.[day9](./learning/day9)
