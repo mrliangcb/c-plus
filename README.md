@@ -2,11 +2,12 @@
 
 ## 1.[day1](./learning/day1)
 内容：iostream的 cout，自定义函数与声明，数组声明定义  
-`class A:  
+``class A:  
 {  
 int test(){return 1;};  
 int test1();  
-}`  
+}  
+``  
 
 ## 2.[day2](./learning/day2)
 内容：对文件进行读写，以及几种模式,app追加,in读,out写
