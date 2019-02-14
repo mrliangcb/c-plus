@@ -2,6 +2,11 @@
 
 ## 1.[day1](./learning/day1)
 内容：iostream的 cout，自定义函数与声明，数组声明定义
+`class A:
+{
+int test(){return 1;};
+int test1();
+`}
 
 ## 2.[day2](./learning/day2)
 内容：对文件进行读写，以及几种模式,app追加,in读,out写
@@ -26,22 +31,28 @@ private: int a;
 public:
 构造方法(int a1): a(a1),b(8.8)    把括号里面的赋值给括号前面的  
 
-(2) `const修饰函数` （用于解决同名函数，且参数列表相同的冲突）
+(2) `const修饰函数` 常量函数（用于解决同名函数，且参数列表相同的冲突）
 类内声明：  
 <类型标志符>函数名（参数表）const  
 void fun() const;  
 void fun();  
 类外定义:  
-void father::fun() {定义}  
-void father::fun() const {定义}  
+`void father::fun() {定义}`  
+`void father::fun() const {定义}`  //const在函数右边，称为常量成员函数，他不会修改类的所有成员（比如只读）
 
-main里建立对象 
+main里建立对象  'const对象才能调用const函数'
 const father son3('b');
 father son2('a');
 调用:son2.fun()调用的是无const的    son3.fun()是有const的   
 
-
-
+(3) `const修饰变量` const成员  常量成员    
+const+类型+变量名; 
+const成员必须用初始化表的形式进行初始化。 
+'private:
+    int x;
+    const int y;'
+	
+'A::A() :y(2){}' 一定要在构造函数才能初始化吗?
 
 ## 8.[day8](./learning/day8)
 内容:
@@ -67,51 +78,51 @@ father son2('a');
 如果#ifndef aa.h为假的话，就直接走到末尾endif   不执行程序正文   
 所以这句话的意思：如果还没定义这个aa.h头文件的话，那就这篇文章定义  
   
-<7>extern用法  顺序：实际工程->头文件.h->include过这个头文件的cpp
+<7>extern用法  顺序：实际工程->头文件.h->include过这个头文件的cpp  
 ```
 a.h相当于说明书
-情景:a,b,c,d.cpp都include "a.h"，因此a,b,c,d都是a.h的小弟
+情景:a,b,c,d.cpp都include "a.h"，因此a,b,c,d都是a.h的小弟  
 
-const int a1=3; 声明定义了全局常量
-extern string b1; 声明了外部的变量，当某人.cpp想用a.h系统下的这个b1值，不用直接看哪个小弟有
-//直接include a.h，直接向大佬要，然后大佬就从小弟里面找b1这个值给某人.cpp
-//注意，自己include了a.h，自己也是a.h的小弟
-//所以说我想用某个模块的b1变量时，只要include相关头文件(包含了有b1的模块的)就行
-extern abc b2; 外部的类声明了一个b2对象 全局的
+const int a1=3; 声明定义了全局常量  
+extern string b1; 声明了外部的变量，当某人.cpp想用a.h系统下的这个b1值，不用直接看哪个小弟有  
+//直接include a.h，直接向大佬要，然后大佬就从小弟里面找b1这个值给某人.cpp  
+//注意，自己include了a.h，自己也是a.h的小弟  
+//所以说我想用某个模块的b1变量时，只要include相关头文件(包含了有b1的模块的)就行  
+extern abc b2; 外部的类声明了一个b2对象 全局的  
 ```
   
 ```
-工具模块b
-b.cpp
-#include "a.h" //成为了a.h的小弟
-string b1='hello!' //原来是b模块定义了b1
+工具模块b  
+b.cpp  
+#include "a.h" //成为了a.h的小弟  
+string b1='hello!' //原来是b模块定义了b1  
 ```
   
 ```
-实际工程
-#include "a.h" //如果我要用模块b的b1,就include b的大佬就行a.h
-cout<<b1<<endl;
+实际工程  
+#include "a.h" //如果我要用模块b的b1,就include b的大佬就行a.h  
+cout<<b1<<endl;  
 ```
   
-<8>静态全局变量
-对于文章外部：
+<8>静态全局变量  
+对于文章外部：  
 暂时看到静态变量在.h头文件中声明、定义  
 主程序也有定义static in a=3，意思是本文用到的a全都是a=3这个量，不看别人定义a是什么  
 工具模块cpp中出现的话，就是此模块内用到的a都是指本模块定义的a=3，不管别的文章怎么定义  
 注意:include .h， 头文件也会收纳进来cpp作为本文的扩充，所以头文件定义的static a=3也算是本文定义的  
 
-文章内部：
-(1)类内定义static: 如果也是public static 则可以在类外使用 类.变量 或者 对象.变量 都可以访问修改
-	如果是private static ：不但属于类的，而且只能类内、自己用，类外不可访问类.变量，对象更加不可以
-(2)类外全局: 本文范围内都可以用，本文以外不可以
+文章内部：  
+(1)类内定义static: 如果也是public static 则可以在类外使用 类.变量 或者 对象.变量 都可以访问修改  
+	如果是private static ：不但属于类的，而且只能类内、自己用，类外不可访问类.变量，对象更加不可以  
+(2)类外全局: 本文范围内都可以用，本文以外不可以  
 
-## 11. ./运行linux文件
-可以运行.cpp 通过cmake出来的可执行文件文件(shall)
+## 11. ./运行linux文件  
+可以运行.cpp 通过cmake出来的可执行文件文件(shall)  
 
-如何将源文件.cpp  cmake 成可执行文件?
-https://blog.csdn.net/zhuquan945/article/details/52788278
-http://zhangyuyu.github.io/2018/06/24/%E8%AE%A4%E8%AF%86Cmake/
-cmake是操作makelist
-https://my.oschina.net/hevakelcj/blog/287782
+如何将源文件.cpp  cmake 成可执行文件?  
+https://blog.csdn.net/zhuquan945/article/details/52788278  
+http://zhangyuyu.github.io/2018/06/24/%E8%AE%A4%E8%AF%86Cmake/  
+cmake是操作makelist  
+https://my.oschina.net/hevakelcj/blog/287782  
 
 
