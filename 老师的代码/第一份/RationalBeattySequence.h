@@ -77,19 +77,19 @@ public:
      * \throws DGtal::InfiniteNumberException if the sequence hasn't a
      * complementary sequence (*i.e.* if #_ratio ≤ 1).
      */
-    RationalBeattySequence complement() const { //定义重载
+    RationalBeattySequence complement() const { //定义重载  返回的是这个类的类型
   DGtal::InfiniteNumberException dgtalinfty;
-  if (_ratio <= 1) {
+  if (_ratio <= 1) {//斜率小于1的
       throw dgtalinfty;
   }
   boost::rational<int> r(_ratio.numerator(), _ratio.numerator() - _ratio.denominator());
-  return RationalBeattySequence(r, -_offset - 1);
+  return RationalBeattySequence(r, -_offset - 1); //递归，输入r作为斜率，offset抵消
     }
 
     /**
      * Computes the value of the sequence for index **n**.
      */
-    int operator()(unsigned int n) const {
+    int operator()(unsigned int n) const {//返回int，输入n
   //assert(n >= 0);
   // Floor dir: floor(n*tau) -> (n*num)/den
   // Ceil dir: ceil(n*tau - 1) -> (n*num+den-1)/den - 1 -> (n*num-1)/den
