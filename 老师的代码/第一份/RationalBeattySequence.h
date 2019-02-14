@@ -61,7 +61,7 @@ public:
      * (*i.e.* if #_ratio ≤ 0). 斜率小于0，则是减少
      */
 
-    RationalBeattySequence invert() const {//构造方法的重载  这里invert是什么意思
+    RationalBeattySequence invert() const {//构造方法的重载 常量函数，对成员只读  这里invert是什么意思
   DGtal::InfiniteNumberException dgtalinfty; //创建一个对象
   if (_ratio <= 0) {
       throw dgtalinfty;//表明不是增加的

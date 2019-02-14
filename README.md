@@ -8,7 +8,12 @@ class A:
 int test(){return 1;};  
 int test1();  
 }  
-```  
+```
+test是在类内部声明而且定义的：内联函数
+test1只是在类内声明，在外部定义的（可以在本文类外，也可以在头文件，只要include进来）：
+
+
+  
 
 ## 2.[day2](./learning/day2)
 内容：对文件进行读写，以及几种模式,app追加,in读,out写
