@@ -131,4 +131,10 @@ http://zhangyuyu.github.io/2018/06/24/%E8%AE%A4%E8%AF%86Cmake/
 cmake是操作makelist  
 https://my.oschina.net/hevakelcj/blog/287782  
 
+## 12. [this指针类似python的self](./learning/this)
+
+## 13.虚方法
+
+
+
 

@@ -118,3 +118,11 @@ public:
   _offset == otherSeq._offset;
     }
 };
+
+//比亚蒂序列  比亚蒂定理
+
+
+
+
+
+
