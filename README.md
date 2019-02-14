@@ -21,7 +21,26 @@
 
 ## 7.[day7](./learning/day7)
 内容:类class,类的public变量与方法，可以类外定义也可以类内定义，但要在类内声明;this指针;构造方法就必须在类外定义，而且不用void
+(1)类内只能做初始化操作构造方法
+private: int a;
+public:
+构造方法(int a1): a(a1),b(8.8)    把括号里面的赋值给括号前面的  
 
+(2)`const修饰函数`（用于解决同名函数，且参数列表相同的冲突）
+类内声明：  
+<类型标志符>函数名（参数表）const  
+void fun() const;  
+void fun();  
+类外定义:  
+void father::fun() {定义}  
+void father::fun() const {定义}  
+
+
+
+main里建立对象 
+const father son3('b');
+father son2('a');
+调用:son2.fun()调用的是无const的    son3.fun()是有const的   
 
 ## 8.[day8](./learning/day8)
 内容:
