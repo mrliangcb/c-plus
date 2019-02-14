@@ -1,8 +1,8 @@
 # c++ 学习笔记
 
 ## 1.[day1](./learning/day1)
-内容：iostream的 cout，自定义函数与声明，数组声明定义
-`class A:
+内容：iostream的 cout，自定义函数与声明，数组声明定义  
+`class A:  
 {  
 int test(){return 1;};  
 int test1();  
