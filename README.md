@@ -26,7 +26,7 @@ private: int a;
 public:
 构造方法(int a1): a(a1),b(8.8)    把括号里面的赋值给括号前面的  
 
-(2)`const修饰函数`（用于解决同名函数，且参数列表相同的冲突）
+(2) `const修饰函数` （用于解决同名函数，且参数列表相同的冲突）
 类内声明：  
 <类型标志符>函数名（参数表）const  
 void fun() const;  
@@ -35,12 +35,13 @@ void fun();
 void father::fun() {定义}  
 void father::fun() const {定义}  
 
-
-
 main里建立对象 
 const father son3('b');
 father son2('a');
 调用:son2.fun()调用的是无const的    son3.fun()是有const的   
+
+
+
 
 ## 8.[day8](./learning/day8)
 内容:
