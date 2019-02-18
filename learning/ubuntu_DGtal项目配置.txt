@@ -1,26 +1,54 @@
-#
+#https://dgtal.org/download/
+
+
 1.install c++ compiler编译器
 https://blog.csdn.net/u013634961/article/details/39234183
+g++ -v 7.3.0
+
+clang 安装
+https://www.jianshu.com/p/f7e190e9f4c5
+
+安装cmake
+sudo apt install subversion
+sudo apt install cmake
+cmake -v 3.10.2
+
 
 2.install codeblocks
 https://www.bilibili.com/video/av32403187?from=search&seid=206068546324461069
 也可以直接在商店找
 新建一个file，cpp，就可以直接运行
 
+codeblocks配置第三方库
+https://www.jianshu.com/p/111571e4d6f5
+
+https://www.youtube.com/channel/UCoNrJm4myR8REBcIwIxIzag/search?query=codeblock
+codeblocks教程
+配置环境
+setting->environment
+
+增加库
+settings  compiler
+global compilersettings
+global compiler settings
+右列search directories 搜索路径   然后添加目录
+	compiler加载include库文件路径
+	linker加载library库文件目录
+
 
 3.安装boost
 https://blog.csdn.net/xuehuafeiwu123/article/details/78611203
-
 https://www.boost.org/users/history/version_1_69_0.html
-下载1.69版本
 
+sudo apt-get install libboost-dev
+
+下载1.69版本
 解压
 tar -xf Boost_1_65_1.tar.bz2 
-
 进入boost文件夹
 sudo ./bootstrap.sh 
-
 sudo ./bootstrap.sh --prefix=/usr/local/lib/boost 
+
 接着./b2 install 
 
 
@@ -38,16 +66,17 @@ Boost库是一个可移植、提供源代码的C++库，作为标准库的后备
 
 4.安装zlib
 https://blog.csdn.net/qq_21383435/article/details/79539034
+US (zlib.net)下载这个
 然后解压
 ./configure
 make
 检查，要全部为yes
 安装make install
-
-安装完后
+安装完后，这些地方会有
 usr/local/lib/libz.a
 usr/local/inclue/有zconf.h  zlib.h
-
+find /usr/ -name zlib.pc  查找版本号
+cat 显示出来的地址，就能查版本号
 
 5.安装doxygen
 https://blog.csdn.net/Q1302182594/article/details/51517880
@@ -86,12 +115,8 @@ https://www.cnblogs.com/acbingo/p/4531054.html
 13.有教程
 https://dgtal.org/doc/stable/这里是介绍使用  用户指南
 
-14.codeblocks配置第三方库
-https://www.jianshu.com/p/111571e4d6f5
 
 
-15.https://www.youtube.com/channel/UCoNrJm4myR8REBcIwIxIzag/search?query=codeblock
-codeblocks教程
 
 16.链接动态库和静态库
 https://www.youtube.com/watch?v=80R6MbSpoqc
