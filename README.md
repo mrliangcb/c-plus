@@ -5,8 +5,8 @@
 ```
 class A:  
 {  
-int test(){return 1;};  
-int test1();  
+int test(){return 1;};  //类内声明
+int test1();  //类外声明
 }  
 ```
 test是在类内部声明而且定义的：内联函数
