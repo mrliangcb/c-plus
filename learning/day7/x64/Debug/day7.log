@@ -1,2 +1,2 @@
 ﻿  day7.cpp
-  day7.vcxproj -> C:\lcb\learning_python_git\c-plus\learning\day7\x64\Debug\day7.exe
+c:\lcb\learning_python_git\c-plus\learning\day7\day7.cpp(17): error C2091: 函数返回函数

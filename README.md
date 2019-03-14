@@ -26,17 +26,20 @@ test1只是在类内声明，在外部定义的（可以在本文类外，也可
 ## 5.[day5](./learning/day5)
 内容:指针初步，
 
-## 6.[day6](./learning/day6)
-内容:指针与结构数据structure，与实例化
+## 6.[day6](./learning/day6)  
+内容:指针与结构数据structure，与实例化  
 
-## 7.[day7](./learning/day7)
-内容:类class,类的public变量与方法，可以类外定义也可以类内定义，但要在类内声明;this指针;构造方法就必须在类外定义，而且不用void  
-(1)类内只能做初始化操作构造方法  
-private: int a;
+## 7.[day7](./learning/day7)  
+内容:类class,类的public变量与方法，可以类外定义也可以类内定义，但要在类内声明;this指针;  
+构造方法可以类内定义或者类外都行，而且默认是void 构造(),可以不写void  
+* (1)类内只能做初始化操作构造方法  
+```
+private: int a;  
 public:
 构造方法(int a1): a(a1),b(8.8)    把括号里面的赋值给括号前面的  ，而且构造方法才能初始化，其他不能
+```
 
-(2) `const修饰函数` 常量函数（用于解决同名函数，且参数列表相同的冲突）
+* (2) `const修饰函数` 常量函数（用于解决同名函数，且参数列表相同的冲突）  
 类内声明：  
 <类型标志符>函数名（参数表）const  
 void fun() const;  
@@ -51,14 +54,23 @@ const father son3('b');
 father son2('a');
 调用:son2.fun()调用的是无const的    son3.fun()是有const的   
 
-(3) `const修饰变量` const成员  常量成员    
+* (3) `const修饰变量` const成员  常量成员    
 const+类型+变量名; 
 const成员必须用初始化表的形式进行初始化。 
-'private:
+```
+private:
     int x;
-    const int y;'
+    const int y;
+```
+* (4) 
+```
+CumulativeOfPeriodicSequence invert() const;//定义一个函数，名字为invert，返回的是本类的类型
+	int operator()(int i) const;//定义一个ope函数,函数对象,
+//class f(构造函数的参数)
+//f(函数对象的参数)  相当于f.operator()(参数)
+//区别，如果定义operator(参数)，就不能f(参数用)，而是要f.operator(参数)
+```
 	
-
 
 ## 8.[day8](./learning/day8)  
 内容:  
@@ -142,6 +154,6 @@ https://my.oschina.net/hevakelcj/blog/287782
 
 ## 13.虚方法
 
-
+## 14.
 
 
