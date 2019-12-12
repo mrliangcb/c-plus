@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-#define ITEM 3 //宏定义
+#define ITEM 3 //宏定义一个常数  而不是变量
 
 //int main()
 //{

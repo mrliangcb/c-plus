@@ -1,3 +1,5 @@
+
+#ifndef __IUTF8_STRING__
 //#include<stdio.h>  //c写法
 #include<iostream>  //c++写法 .h是旧的写法  最新标准不用.h
 using namespace std;

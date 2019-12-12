@@ -7,8 +7,6 @@ class father
 {
 	//structure只有成员没方法
 	//class有成员和方法
-	
-	
 	public://作用域
 		std::string color;
 		float num=100;
